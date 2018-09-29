@@ -27,7 +27,6 @@ class App extends Component {
     this.props.birdStore.addBird(bird);
     this.bird.value='';      
   }
-
   render() {
     const {birdStore} = this.props;
     
@@ -35,9 +34,8 @@ class App extends Component {
       
       <div className="App">
       <h2>You have {birdStore.birdCount} birds!</h2>
-
       <form onSubmit={e=>this.handleSubmission(e)}>
-        <input class="form-control" type="text" placeholder="Input the birb name" ref={input=>this.bird=input} />
+        <input className="form-control" type="text" placeholder="Input the birb name" ref={input=>this.bird=input} />
         <button className="btn btn-primary" >Add bird</button>
       </form>
       <ul>
@@ -53,5 +51,6 @@ class App extends Component {
     );
   }
 }
+
 
 export default App;
